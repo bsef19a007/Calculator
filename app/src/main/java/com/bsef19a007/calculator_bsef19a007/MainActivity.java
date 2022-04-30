@@ -144,6 +144,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.backspaceBtn:
                 int curPos = display.getSelectionStart();
+                int textLength =display.getText().length();
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + view.getId());
