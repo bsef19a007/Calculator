@@ -145,10 +145,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.equalBtn:
                 String userExpression = display.getText().toString();
 
+//                userExpression = userExpression.replaceAll(getResources().getString(R.string.divideText), replacement:'/');
+//                userExpression = userExpression.replaceAll(getResources().getString(R.string.multiplyText), replacement:'*');
+
                 Expression expression = new Expression(userExpression);
                 String result = String.valueOf(expression.calculate());
 
                 display.setText(result);
+                display.setSelection(result.length());
                 break;
             case R.id.backspaceBtn:
                 int curPosition = display.getSelectionStart();
