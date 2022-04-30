@@ -1,9 +1,7 @@
 package com.bsef19a007.calculator_bsef19a007;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
 import android.view.View;
