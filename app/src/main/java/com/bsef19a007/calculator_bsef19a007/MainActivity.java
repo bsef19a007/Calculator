@@ -3,19 +3,19 @@ package com.bsef19a007.calculator_bsef19a007;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-//import android.content.DialogInterface;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-//import android.widget.TextView;
+import android.widget.TextView;
 import org.mariuszgromada.math.mxparser.*;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-//    private TextView previousCalculation;
+    private TextView previousCalculation;
     private EditText display;
 
 
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        previousCalculation = findViewById(R.id.previousCalculationView);
+        previousCalculation = findViewById(R.id.previousCalculationView);
         display = findViewById(R.id.displayEditText);
 
         Button zeroButton = findViewById(R.id.zeroBtn);
@@ -145,8 +145,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.equalBtn:
                 String userExpression = display.getText().toString();
 
-//                userExpression = userExpression.replaceAll(getResources().getString(R.string.divideText), replacement:'/');
-//                userExpression = userExpression.replaceAll(getResources().getString(R.string.multiplyText), replacement:'*');
+                previousCalculation.setText(userExpression);
 
                 Expression expression = new Expression(userExpression);
                 String result = String.valueOf(expression.calculate());
