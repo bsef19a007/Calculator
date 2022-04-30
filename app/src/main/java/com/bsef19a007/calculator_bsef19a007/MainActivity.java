@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 //import android.content.DialogInterface;
 import android.os.Bundle;
+import android.text.SpannableStringBuilder;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -143,8 +144,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.equalBtn:
                 break;
             case R.id.backspaceBtn:
-                int curPos = display.getSelectionStart();
+                int curPosition = display.getSelectionStart();
                 int textLength =display.getText().length();
+
+                if (curPosition != 0 && textLength != 0){
+                    SpannableStringBuilder selection = (SpannableStringBuilder) display.getText();
+                }
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + view.getId());
