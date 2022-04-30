@@ -147,6 +147,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 Expression expression = new Expression(userExpression);
                 String result = String.valueOf(expression.calculate());
+
+                display.setText(result);
                 break;
             case R.id.backspaceBtn:
                 int curPosition = display.getSelectionStart();
