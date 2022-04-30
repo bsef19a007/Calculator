@@ -143,6 +143,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.equalBtn:
                 break;
             case R.id.backspaceBtn:
+                int curPos = display.getSelectionStart();
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + view.getId());
