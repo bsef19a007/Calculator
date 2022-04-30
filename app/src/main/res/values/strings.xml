@@ -38,5 +38,7 @@
     <string name="isPrimeFunctionText">prime</string>
 
     <string name="backspace"> </string>
+    <string name="displayHint">Enter a value</string>
+    <string name="x">×</string>
 
 </resources>
