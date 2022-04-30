@@ -149,6 +149,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 if (curPosition != 0 && textLength != 0){
                     SpannableStringBuilder selection = (SpannableStringBuilder) display.getText();
+                    selection.replace(curPosition-1, curPosition, "");
                 }
                 break;
             default:
