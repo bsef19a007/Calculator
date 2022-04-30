@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 //import android.widget.TextView;
+import org.mariuszgromada.math.mxparser.*;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -142,6 +143,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 display.setText("");
                 break;
             case R.id.equalBtn:
+                String userExpression = display.getText().toString();
+
+                Expression expression = new Expression(userExpression);
+                String result = String.valueOf(expression.calculate());
                 break;
             case R.id.backspaceBtn:
                 int curPosition = display.getSelectionStart();
